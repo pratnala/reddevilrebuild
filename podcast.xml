@@ -326,5 +326,17 @@
             <itunes:duration>2237</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
         </item>
+        <item>
+            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:season>3</itunes:season>
+            <itunes:episode>2</itunes:episode>
+            <title>Can Michael Carrick TURN AROUND Manchester United's Fortunes?</title>
+            <description><![CDATA[Manchester United finally won a game after almost 2 months. With a player mutiny afoot and INEOS being indecisive as always, can Michael Carrick turn it around for the Red Devils?<br /><br />Let us know by tagging us on our socials what you think about our midfield rebuild this season! - <a href="https://www.instagram.com/reddevilrebuild/">Instagram</a>, <a href="https://x.com/reddevilrebuild">X (Twitter)</a>, <a href="https://www.threads.com/@reddevilrebuild">Threads</a>, and <a href="https://www.facebook.com/reddevilrebuild">Facebook</a>.<br /><br />Don't forget to leave us a 5-star review and help more Manchester United fans find #RedDevilRebuild!]]></description>
+            <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2026-11-05.mp3" type="audio/mpeg" length="87086908"/>
+            <guid>9A10851C-4515-471E-B749-706CC0B1243D</guid>
+            <pubDate>Thu, 05 Nov 2026 22:15:00 +0530</pubDate>
+            <itunes:duration>2176</itunes:duration>
+            <itunes:explicit>false</itunes:explicit>
+        </item>
     </channel>
 </rss>
