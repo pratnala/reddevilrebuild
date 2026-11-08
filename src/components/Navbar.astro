@@ -1,0 +1,46 @@
+---
+const { slug } = Astro.props;
+
+const mainLinks = [
+    { label: 'Shorts', slug: 'shorts' }
+];
+const playlists = [
+    { label: 'Predictions', slug: 'predictions' },
+    { label: 'Clips', slug: 'clips' }
+];
+const inPlaylists = playlists.some(link => link.slug === slug);
+---
+<nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top transition-glass">
+    <div class="container">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class:list={['nav-link', { active: slug === undefined }]} href="/" aria-current={slug === undefined ? 'page' : undefined}>Home</a>
+                </li>
+                {mainLinks.map(link => (
+                    <li class="nav-item">
+                        <a class:list={['nav-link', { active: slug === link.slug }]} href={`/${link.slug}`} aria-current={slug === link.slug ? 'page' : undefined}>{link.label}</a>
+                    </li>
+                ))}
+                <li class="nav-item dropdown">
+                    <a class:list={['nav-link dropdown-toggle', { active: inPlaylists }]} href="#" id="playlistsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Playlists
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow" aria-labelledby="playlistsDropdown">
+                        {playlists.map(link => (
+                            <li><a class:list={['dropdown-item', { active: slug === link.slug }]} href={`/${link.slug}`} aria-current={slug === link.slug ? 'page' : undefined}>{link.label}</a></li>
+                        ))}
+                    </ul>
+                </li>
+                <li class="nav-item d-flex justify-content-center align-items-center ms-lg-3 mt-3 mt-lg-0">
+                    <a class="nav-link" href="#" id="darkModeToggle" aria-label="Toggle Theme">
+                        <i id="darkModeIcon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

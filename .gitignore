@@ -1,6 +1,14 @@
+# build output
+dist
+.astro
+node_modules
+
 # wrangler files
 .wrangler
 .dev.vars*
 !.dev.vars.example
 .env*
 !.env.example
+
+# claude
+.claude
