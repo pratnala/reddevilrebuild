@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"
     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-    xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Red Devil Rebuild</title>
         <link>https://www.reddevilrebuild.com</link>
+        <atom:link href="https://www.reddevilrebuild.com/podcast.xml" rel="self" type="application/rss+xml"/>
         <language>en</language>
         <itunes:author>Pratyush Nalam, Delwyn Serrao</itunes:author>
         <description>
@@ -29,7 +31,8 @@
                 Love Manchester United? You have come to the right place! Introducing #TakeoverUnitedPod! Pratyush, Somdeep, and Rohan take over your weekend with all things #mufc! Get ready for an entertaining discussion of the past week&apos;s games, tactics, squad building, transfers, and much more!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-02-01.mp3" type="audio/mpeg" length="146491224"/>
-            <guid>4393C038-B13B-45D5-9FD9-4B778557EA0C</guid>
+            <guid isPermaLink="false">4393C038-B13B-45D5-9FD9-4B778557EA0C</guid>
+            <link>https://www.reddevilrebuild.com/episodes/welcome-to-takeover-united-pod</link>
             <pubDate>Sat, 01 Feb 2025 10:30:00 +0530</pubDate>
             <itunes:duration>4577</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -43,7 +46,8 @@
                 This week on #TakeoverUnitedPod, we dissect the Crystal Palace and Leicester City games, vent our frustrations about a very underwhelming transfer window, and debate: was Rashford&apos;s departure the right move? Join Pratyush, Somdeep, and Rohan for a tactical breakdown that&apos;s as insightful as it is entertaining!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-02-09.mp3" type="audio/mpeg" length="209487475"/>
-            <guid>A6C003B5-64D3-4756-B6D9-7FFC94A73D00</guid>
+            <guid isPermaLink="false">A6C003B5-64D3-4756-B6D9-7FFC94A73D00</guid>
+            <link>https://www.reddevilrebuild.com/episodes/dreadful-on-the-pitch-disappointing-in-the-window</link>
             <pubDate>Sun, 09 Feb 2025 10:30:00 +0530</pubDate>
             <itunes:duration>6546</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -57,7 +61,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan build the perfect XI for Ruben Amorim...twice! We&apos;ve got one dream lineup for you ignoring the injury crisis, and another realistic one that accounts for the mountain of sidelined players. We also break down the incoming January transfers!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-02-16.mp3" type="audio/mpeg" length="227281053"/>
-            <guid>8076DD13-804B-4676-8DED-ED9D12B94D0B</guid>
+            <guid isPermaLink="false">8076DD13-804B-4676-8DED-ED9D12B94D0B</guid>
+            <link>https://www.reddevilrebuild.com/episodes/best-lineup-for-ruben-amorim</link>
             <pubDate>Sun, 16 Feb 2025 10:30:00 +0530</pubDate>
             <itunes:duration>5681</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -71,7 +76,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan discuss the gutless performance against Tottenham Hotspur, a revealing interview from an ex-Manchester United player - Raphaël #Varane, and an analysis of the heartless way in which INEOS is carrying out a much-needed cost-cutting.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-02-22.mp3" type="audio/mpeg" length="224068583"/>
-            <guid>108DEAFF-EFC9-4BF4-A2F9-A38E292200CD</guid>
+            <guid isPermaLink="false">108DEAFF-EFC9-4BF4-A2F9-A38E292200CD</guid>
+            <link>https://www.reddevilrebuild.com/episodes/toothless-in-london-penny-pinching-in-manchester</link>
             <pubDate>Sat, 22 Feb 2025 10:30:00 +0530</pubDate>
             <itunes:duration>5601</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -85,7 +91,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan analyze the Everton, Ipswich, Fulham, and Real Sociedad games, give a passionate defense of Bruno Fernandes, rant on the club&apos;s transfers (again), wonder if Kobbie Mainoo will really depart Manchester United this summer, and serve up some predictions for Arsenal and Real Sociedad!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-03-08.mp3" type="audio/mpeg" length="181316995"/>
-            <guid>FBDDE25B-8C1A-4A06-8DE5-656A7E733AEA</guid>
+            <guid isPermaLink="false">FBDDE25B-8C1A-4A06-8DE5-656A7E733AEA</guid>
+            <link>https://www.reddevilrebuild.com/episodes/we-do-not-deserve-bruno-fernandes</link>
             <pubDate>Sat, 08 Mar 2025 11:00:00 +0530</pubDate>
             <itunes:duration>4532</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -99,7 +106,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan discuss the team's encouraging progress, analyzing tactical shifts in the Arsenal and Real Sociedad matches with positive signs of Ruben Amorim's influence, dissect Sir Jim Ratcliffe's revealing interview, and share some (cautiously optimistic) thoughts on the exciting new stadium plans!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-03-15.mp3" type="audio/mpeg" length="172111161"/>
-            <guid>FE57DF2F-09C3-4FAA-B980-9A295F6E1B4B</guid>
+            <guid isPermaLink="false">FE57DF2F-09C3-4FAA-B980-9A295F6E1B4B</guid>
+            <link>https://www.reddevilrebuild.com/episodes/learning-the-ruben-amorim-way</link>
             <pubDate>Sat, 15 Mar 2025 22:00:00 +0530</pubDate>
             <itunes:duration>4302</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -113,7 +121,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan discuss the Leicester City game, debate the team's potential ceiling this season, and rate the incoming transfers for the 2024-25 season!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-03-22.mp3" type="audio/mpeg" length="155130691"/>
-            <guid>DA02C957-433D-44B5-B5B3-9126C8AD2B8C</guid>
+            <guid isPermaLink="false">DA02C957-433D-44B5-B5B3-9126C8AD2B8C</guid>
+            <link>https://www.reddevilrebuild.com/episodes/rating-2024-25-incoming-transfers</link>
             <pubDate>Sat, 22 Mar 2025 10:00:00 +0530</pubDate>
             <itunes:duration>3877</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -127,7 +136,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan put their United knowledge to the test with "Guess the Manchester United Player!" See how well they (and you!) remember the club's legends and current stars.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-03-29.mp3" type="audio/mpeg" length="174580345"/>
-            <guid>1194AAAD-3880-496C-BE60-639A9A78108F</guid>
+            <guid isPermaLink="false">1194AAAD-3880-496C-BE60-639A9A78108F</guid>
+            <link>https://www.reddevilrebuild.com/episodes/guess-the-manchester-united-player</link>
             <pubDate>Sat, 29 Mar 2025 10:30:00 +0530</pubDate>
             <itunes:duration>4364</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -141,7 +151,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan rue the team reverting to familiar mistakes against Nottingham Forest!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-04-04.mp3" type="audio/mpeg" length="72500655"/>
-            <guid>AD1D0A77-4E1D-4A2E-928D-807206A56A32</guid>
+            <guid isPermaLink="false">AD1D0A77-4E1D-4A2E-928D-807206A56A32</guid>
+            <link>https://www.reddevilrebuild.com/episodes/lamenting-familiar-mistakes</link>
             <pubDate>Fri, 04 Apr 2025 08:30:00 +0530</pubDate>
             <itunes:duration>1812</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -155,7 +166,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan mourn two frustrating draws against listless opposition - one because of a toothless attack against Manchester City and the other because of a sieve-like defense against Olympique Lyonnais. Two winnable games, but instead we got two depressing draws!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-04-11.mp3" type="audio/mpeg" length="148177393"/>
-            <guid>4741DF2C-3AA9-4D36-9891-4551A22DE1B0</guid>
+            <guid isPermaLink="false">4741DF2C-3AA9-4D36-9891-4551A22DE1B0</guid>
+            <link>https://www.reddevilrebuild.com/episodes/uninspiring-in-attack-leaky-in-defense</link>
             <pubDate>Fri, 11 Apr 2025 10:00:00 +0530</pubDate>
             <itunes:duration>3704</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -169,7 +181,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan celebrate the wild win against Olympique Lyonnais, ignore the loss against Newcastle United, and give their respective lists of 3 realistic summer transfers that they believe would elevate the club for next season!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-04-18.mp3" type="audio/mpeg" length="148860951"/>
-            <guid>9F710ECC-6A72-4DAC-9365-1D1173FF50CD</guid>
+            <guid isPermaLink="false">9F710ECC-6A72-4DAC-9365-1D1173FF50CD</guid>
+            <link>https://www.reddevilrebuild.com/episodes/magical-european-night-at-old-trafford</link>
             <pubDate>Fri, 18 Apr 2025 10:00:00 +0530</pubDate>
             <itunes:duration>3721</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -183,7 +196,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan rejoice (and analyze) the dominant win against Athletic Club, dissect why Manchester United has such bipolar performances between the Premier League and the Europa League, and have a free-ranging discussion on Ruben Amorim's philosophy!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-05-02.mp3" type="audio/mpeg" length="208411799"/>
-            <guid>DBB63642-9142-4886-AC9D-17D26FA40F71</guid>
+            <guid isPermaLink="false">DBB63642-9142-4886-AC9D-17D26FA40F71</guid>
+            <link>https://www.reddevilrebuild.com/episodes/clinging-on-to-the-european-dream</link>
             <pubDate>Fri, 02 May 2025 09:30:00 +0530</pubDate>
             <itunes:duration>5209</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -197,7 +211,8 @@
                 This week on #TakeoverUnitedPod, Pratyush, Somdeep, and Rohan dive deep into the shortcomings of Manchester United Football Club, debate if Ruben Amorim is the right man for the future, and analyze if INEOS has the stomach to do the long-term squad planning that the club sorely needs!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-05-16.mp3" type="audio/mpeg" length="220924987"/>
-            <guid>C9725AE0-5BB9-4DD1-AD50-7CF80E618CDB</guid>
+            <guid isPermaLink="false">C9725AE0-5BB9-4DD1-AD50-7CF80E618CDB</guid>
+            <link>https://www.reddevilrebuild.com/episodes/is-mufc-cooked</link>
             <pubDate>Fri, 16 May 2025 11:00:00 +0530</pubDate>
             <itunes:duration>5522</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -211,7 +226,8 @@
                 I have no words. The club is beyond repair.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-05-23.mp3" type="audio/mpeg" length="232192285"/>
-            <guid>98DAB5BB-7E91-45FA-8F81-E19F87006104</guid>
+            <guid isPermaLink="false">98DAB5BB-7E91-45FA-8F81-E19F87006104</guid>
+            <link>https://www.reddevilrebuild.com/episodes/the-failure-of-manchester-united</link>
             <pubDate>Fri, 23 May 2025 10:30:00 +0530</pubDate>
             <itunes:duration>5804</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -225,7 +241,8 @@
                 After a summer hiatus, #TakeoverUnitedPod is back! In this episode, Pratyush and Somdeep look back at the highs and lows of Marcus Rashford's time at Manchester United, analyzing everything from his iconic debut to the struggles that led to his recent departure.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-08-07.mp3" type="audio/mpeg" length="201438562"/>
-            <guid>619712EA-968A-4738-9C91-6F8A8A8E0FEE</guid>
+            <guid isPermaLink="false">619712EA-968A-4738-9C91-6F8A8A8E0FEE</guid>
+            <link>https://www.reddevilrebuild.com/episodes/highs-and-lows-of-marcus-rashford</link>
             <pubDate>Thu, 07 Aug 2025 12:00:00 +0530</pubDate>
             <itunes:duration>5035</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -239,7 +256,8 @@
                 It was a familiar sight at the Etihad Stadium as Manchester United fell to yet another defeat, this time at the hands of Manchester City in a listless capitulation. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep dissect the tactical shortcomings that led to the loss and debate whether Ruben Amorim deserves more time to turn things around at Old Trafford.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-09-14.mp3" type="audio/mpeg" length="152211180"/>
-            <guid>2C191E00-EC0F-49A6-9DA5-E3914A27D713</guid>
+            <guid isPermaLink="false">2C191E00-EC0F-49A6-9DA5-E3914A27D713</guid>
+            <link>https://www.reddevilrebuild.com/episodes/does-amorim-deserve-more-time</link>
             <pubDate>Mon, 15 Sep 2025 00:00:00 +0530</pubDate>
             <itunes:duration>3804</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -253,7 +271,8 @@
                 A much-needed win against Chelsea at Old Trafford has given Manchester United fans a glimmer of hope amidst a challenging start to the season. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep debate whether this marks a turning point for Ruben Amorim's tenure or if it's just a false start!
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-09-23.mp3" type="audio/mpeg" length="156172902"/>
-            <guid>48E20446-E48B-463A-A4AA-F4FAE3D05255</guid>
+            <guid isPermaLink="false">48E20446-E48B-463A-A4AA-F4FAE3D05255</guid>
+            <link>https://www.reddevilrebuild.com/episodes/ray-of-hope-or-false-start</link>
             <pubDate>Tue, 23 Sep 2025 23:00:00 +0530</pubDate>
             <itunes:duration>3904</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -267,7 +286,8 @@
                 Manchester United slip to yet another disappointing defeat against Brentford at the Gtech Community Stadium, continuing their poor run of form. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep debunk the myth of "underlying data" looking good, question if Bryan Mbeumo made the correct choice, compare Ruben Amorim's record to Gary Neville's, and most importantly, ask the critical question - "how much longer do we suffer?"
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-09-28.mp3" type="audio/mpeg" length="151507307"/>
-            <guid>5E6C1355-AC3F-42BE-AFE3-4B82EAA372FB</guid>
+            <guid isPermaLink="false">5E6C1355-AC3F-42BE-AFE3-4B82EAA372FB</guid>
+            <link>https://www.reddevilrebuild.com/episodes/how-much-longer-do-we-suffer</link>
             <pubDate>Sun, 28 Sep 2025 23:00:00 +0530</pubDate>
             <itunes:duration>3787</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -281,7 +301,8 @@
                 A dominant win against newly-promoted Sunderland with a clinical display has given Ruben Amorim a new lease of life. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep discuss the tactical adjustments that made this possible, whether this marks a turning point for Amorim's tenure, and debate if Amorim deserves more time to turn things around at Old Trafford.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-10-04.mp3" type="audio/mpeg" length="145917227"/>
-            <guid>2CAF15BF-6806-4453-AF57-26C9440E646A</guid>
+            <guid isPermaLink="false">2CAF15BF-6806-4453-AF57-26C9440E646A</guid>
+            <link>https://www.reddevilrebuild.com/episodes/ray-of-hope-for-amorim</link>
             <pubDate>Sun, 05 Oct 2025 00:00:00 +0530</pubDate>
             <itunes:duration>3647</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -295,7 +316,8 @@
                 Manchester United followed up their dominant win against Sunderland with comprehensive victories over Liverpool and Brighton and Hove Albion. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep analyze the tactical changes that have led to this turnaround, debate whether Ruben Amorim is finally finding his footing, and discuss if Manchester United is truly turning a corner this season.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-10-26.mp3" type="audio/mpeg" length="163383860"/>
-            <guid>92B36B1E-3ADC-4EFA-9C11-3DCD4D35A456</guid>
+            <guid isPermaLink="false">92B36B1E-3ADC-4EFA-9C11-3DCD4D35A456</guid>
+            <link>https://www.reddevilrebuild.com/episodes/is-united-finally-turning-a-corner</link>
             <pubDate>Sun, 26 Oct 2025 23:00:00 +0530</pubDate>
             <itunes:duration>4084</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -309,7 +331,8 @@
                 Manchester United's recent draws against Tottenham Hotspur and Nottingham Forest have been characterized by a distinct tactical approach under Ruben Amorim: focusing on long balls and second balls. In this episode of #TakeoverUnitedPod, Pratyush and Somdeep dissect this high-intensity strategy, debate its sustainability over a demanding schedule of playing twice a week, and analyze which players' stock has risen or fallen over the last fortnight.
             </description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2025-11-14.mp3" type="audio/mpeg" length="194095792"/>
-            <guid>E64D6A93-BC5D-4078-BF6E-D237A782317D</guid>
+            <guid isPermaLink="false">E64D6A93-BC5D-4078-BF6E-D237A782317D</guid>
+            <link>https://www.reddevilrebuild.com/episodes/long-balls-and-second-balls</link>
             <pubDate>Fri, 14 Nov 2025 23:00:00 +0530</pubDate>
             <itunes:duration>4852</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -321,7 +344,8 @@
             <title>Do We Like Manchester United's Transfers?</title>
             <description><![CDATA[It is time for a new season, and the transfer window is about to slam shut! What do we think about Manchester United's transfer business? Find out in the first episode of the 2026/27 season!<br /><br />Let us know by tagging us on our socials what you think about our midfield rebuild this season! - <a href="https://www.instagram.com/reddevilrebuild/">Instagram</a>, <a href="https://x.com/reddevilrebuild">X (Twitter)</a>, <a href="https://www.threads.com/@reddevilrebuild">Threads</a>, and <a href="https://www.facebook.com/reddevilrebuild">Facebook</a>.<br /><br />Don't forget to leave us a 5-star review and help more Manchester United fans find #RedDevilRebuild!]]></description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2026-08-27.mp3" type="audio/mpeg" length="89518412"/>
-            <guid>CDA2A678-1A1E-4C2D-AFD3-C21AE04B9C0B</guid>
+            <guid isPermaLink="false">CDA2A678-1A1E-4C2D-AFD3-C21AE04B9C0B</guid>
+            <link>https://www.reddevilrebuild.com/episodes/do-we-like-uniteds-transfers</link>
             <pubDate>Thu, 27 Aug 2026 21:30:00 +0530</pubDate>
             <itunes:duration>2237</itunes:duration>
             <itunes:explicit>false</itunes:explicit>
@@ -333,7 +357,8 @@
             <title>Can Michael Carrick TURN AROUND Manchester United's Fortunes?</title>
             <description><![CDATA[Manchester United finally won a game after almost 2 months. With a player mutiny afoot and INEOS being indecisive as always, can Michael Carrick turn it around for the Red Devils?<br /><br />Let us know by tagging us on our socials what you think about our midfield rebuild this season! - <a href="https://www.instagram.com/reddevilrebuild/">Instagram</a>, <a href="https://x.com/reddevilrebuild">X (Twitter)</a>, <a href="https://www.threads.com/@reddevilrebuild">Threads</a>, and <a href="https://www.facebook.com/reddevilrebuild">Facebook</a>.<br /><br />Don't forget to leave us a 5-star review and help more Manchester United fans find #RedDevilRebuild!]]></description>
             <enclosure url="https://dts.podtrac.com/redirect.mp3/episodes.reddevilrebuild.com/2026-11-05.mp3" type="audio/mpeg" length="87086908"/>
-            <guid>9A10851C-4515-471E-B749-706CC0B1243D</guid>
+            <guid isPermaLink="false">9A10851C-4515-471E-B749-706CC0B1243D</guid>
+            <link>https://www.reddevilrebuild.com/episodes/can-carrick-turn-around-uniteds-fortunes</link>
             <pubDate>Thu, 05 Nov 2026 22:15:00 +0530</pubDate>
             <itunes:duration>2176</itunes:duration>
             <itunes:explicit>false</itunes:explicit>

@@ -6,7 +6,9 @@
         "date": "2026-11-08",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "can-carrick-turn-around-uniteds-fortunes",
+        "guid": "9A10851C-4515-471E-B749-706CC0B1243D"
     },
     {
         "id": "WQnqRTk2ZFc",
@@ -15,7 +17,9 @@
         "date": "2026-08-28",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "do-we-like-uniteds-transfers",
+        "guid": "CDA2A678-1A1E-4C2D-AFD3-C21AE04B9C0B"
     },
     {
         "id": "tTEJjNfRU9E",
@@ -24,7 +28,9 @@
         "date": "2025-11-16",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "long-balls-and-second-balls",
+        "guid": "E64D6A93-BC5D-4078-BF6E-D237A782317D"
     },
     {
         "id": "FekBOuJ64Zs",
@@ -33,7 +39,9 @@
         "date": "2025-10-27",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "is-united-finally-turning-a-corner",
+        "guid": "92B36B1E-3ADC-4EFA-9C11-3DCD4D35A456"
     },
     {
         "id": "q6bzU01UxYk",
@@ -42,7 +50,9 @@
         "date": "2025-10-05",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "ray-of-hope-for-amorim",
+        "guid": "2CAF15BF-6806-4453-AF57-26C9440E646A"
     },
     {
         "id": "dNgInYUovGg",
@@ -51,7 +61,9 @@
         "date": "2025-09-29",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "how-much-longer-do-we-suffer",
+        "guid": "5E6C1355-AC3F-42BE-AFE3-4B82EAA372FB"
     },
     {
         "id": "yqDaFso6GOU",
@@ -60,7 +72,9 @@
         "date": "2025-09-24",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "ray-of-hope-or-false-start",
+        "guid": "48E20446-E48B-463A-A4AA-F4FAE3D05255"
     },
     {
         "id": "0IoT9La-wCk",
@@ -69,7 +83,9 @@
         "date": "2025-09-19",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "does-amorim-deserve-more-time",
+        "guid": "2C191E00-EC0F-49A6-9DA5-E3914A27D713"
     },
     {
         "id": "8hbq9Wls4Ss",
@@ -78,7 +94,9 @@
         "date": "2025-08-09",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "highs-and-lows-of-marcus-rashford",
+        "guid": "619712EA-968A-4738-9C91-6F8A8A8E0FEE"
     },
     {
         "id": "hkoVzM4DnmM",
@@ -87,7 +105,9 @@
         "date": "2025-05-24",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "the-failure-of-manchester-united",
+        "guid": "98DAB5BB-7E91-45FA-8F81-E19F87006104"
     },
     {
         "id": "aAWubDyX5f8",
@@ -96,7 +116,9 @@
         "date": "2025-05-17",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "is-mufc-cooked",
+        "guid": "C9725AE0-5BB9-4DD1-AD50-7CF80E618CDB"
     },
     {
         "id": "AVj2NB4ZoKU",
@@ -105,7 +127,9 @@
         "date": "2025-05-03",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "clinging-on-to-the-european-dream",
+        "guid": "DBB63642-9142-4886-AC9D-17D26FA40F71"
     },
     {
         "id": "pX6JMfUuHq8",
@@ -114,7 +138,9 @@
         "date": "2025-04-19",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "magical-european-night-at-old-trafford",
+        "guid": "9F710ECC-6A72-4DAC-9365-1D1173FF50CD"
     },
     {
         "id": "0nAR3bgXHv4",
@@ -123,7 +149,9 @@
         "date": "2025-04-12",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "uninspiring-in-attack-leaky-in-defense",
+        "guid": "4741DF2C-3AA9-4D36-9891-4551A22DE1B0"
     },
     {
         "id": "PrTTdqfH5-8",
@@ -132,7 +160,9 @@
         "date": "2025-04-05",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "lamenting-familiar-mistakes",
+        "guid": "AD1D0A77-4E1D-4A2E-928D-807206A56A32"
     },
     {
         "id": "pTb6QW_32eI",
@@ -141,7 +171,9 @@
         "date": "2025-03-30",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "guess-the-manchester-united-player",
+        "guid": "1194AAAD-3880-496C-BE60-639A9A78108F"
     },
     {
         "id": "RnAiIaBM9O8",
@@ -150,7 +182,9 @@
         "date": "2025-03-23",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "rating-2024-25-incoming-transfers",
+        "guid": "DA02C957-433D-44B5-B5B3-9126C8AD2B8C"
     },
     {
         "id": "LMh1oLyxKpE",
@@ -159,7 +193,9 @@
         "date": "2025-03-16",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "learning-the-ruben-amorim-way",
+        "guid": "FE57DF2F-09C3-4FAA-B980-9A295F6E1B4B"
     },
     {
         "id": "Koe7BoZlgSw",
@@ -168,7 +204,9 @@
         "date": "2025-03-11",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "we-do-not-deserve-bruno-fernandes",
+        "guid": "FBDDE25B-8C1A-4A06-8DE5-656A7E733AEA"
     },
     {
         "id": "8AnIjOJNViY",
@@ -177,7 +215,9 @@
         "date": "2025-02-22",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "toothless-in-london-penny-pinching-in-manchester",
+        "guid": "108DEAFF-EFC9-4BF4-A2F9-A38E292200CD"
     },
     {
         "id": "m29ydMONduA",
@@ -186,7 +226,9 @@
         "date": "2025-02-16",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "best-lineup-for-ruben-amorim",
+        "guid": "8076DD13-804B-4676-8DED-ED9D12B94D0B"
     },
     {
         "id": "qlQad6dC66w",
@@ -195,7 +237,9 @@
         "date": "2025-02-09",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "dreadful-on-the-pitch-disappointing-in-the-window",
+        "guid": "A6C003B5-64D3-4756-B6D9-7FFC94A73D00"
     },
     {
         "id": "ka4wUBKLzTM",
@@ -204,7 +248,9 @@
         "date": "2025-02-01",
         "categories": [
             "podcast"
-        ]
+        ],
+        "slug": "welcome-to-takeover-united-pod",
+        "guid": "4393C038-B13B-45D5-9FD9-4B778557EA0C"
     },
     {
         "id": "mXvlyr5JX8c",

@@ -1,0 +1,85 @@
+---
+import EpisodeLink from '../../components/EpisodeLink.astro';
+import PlayButton from '../../components/PlayButton.astro';
+import Layout from '../../layouts/Layout.astro';
+import { episodes } from '../../data/videos.js';
+import logo from '../../assets/logos/logo.png';
+
+export function getStaticPaths() {
+    return episodes.map((episode, index) => ({
+        params: { slug: episode.slug },
+        props: { episode, newer: episodes[index - 1], older: episodes[index + 1] }
+    }));
+}
+
+const { episode, newer, older } = Astro.props;
+const pageUrl = new URL(`/episodes/${episode.slug}`, Astro.site);
+const thumbnail = `https://i.ytimg.com/vi/${episode.id}/maxresdefault.jpg`;
+const youTubeUrl = `https://www.youtube.com/watch?v=${episode.id}`;
+
+const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastEpisode',
+    url: pageUrl,
+    name: episode.title,
+    description: episode.summary,
+    datePublished: episode.date,
+    episodeNumber: Number(episode.episodeNumber),
+    timeRequired: `PT${episode.duration}S`,
+    partOfSeason: {
+        '@type': 'PodcastSeason',
+        seasonNumber: Number(episode.seasonNumber)
+    },
+    partOfSeries: {
+        '@type': 'PodcastSeries',
+        name: 'Red Devil Rebuild',
+        url: Astro.site
+    },
+    associatedMedia: {
+        '@type': 'MediaObject',
+        contentUrl: episode.audioUrl
+    },
+    video: {
+        '@type': 'VideoObject',
+        name: episode.title,
+        description: episode.summary,
+        thumbnailUrl: thumbnail,
+        // Google wants a time zone here; only the day is known, so use midnight in India
+        uploadDate: `${episode.date}T00:00:00+05:30`,
+        embedUrl: `https://www.youtube.com/embed/${episode.id}`,
+        url: youTubeUrl
+    }
+};
+---
+<Layout
+    title={`${episode.title} | Red Devil Rebuild`}
+    description={episode.summary}
+    logo={logo}
+    slug={`episodes/${episode.slug}`}
+    image={thumbnail}
+    heroTitle={episode.title}
+    heroTitleClass="display-6"
+    heroText={`${episode.seasonLabel}, Episode ${episode.episodeNumber} · ${episode.dateLabel}`}
+>
+    <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(structuredData).replaceAll('<', '\\u003c')}></script>
+    <article class="container episode">
+        <a class="video-thumb" href={youTubeUrl} data-video-id={episode.id} data-video-title={episode.title} aria-label={`Play ${episode.title}`}>
+            <img src={thumbnail} alt="" width="1280" height="720" fetchpriority="high" decoding="async">
+            <PlayButton />
+        </a>
+        <h2 class="h4 mt-4">Show Notes</h2>
+        <div class="show-notes" set:html={episode.showNotes}></div>
+        <nav class="row g-3 mt-5" aria-label="More episodes">
+            {older && (
+                <div class="col-md-6">
+                    <EpisodeLink episode={older} label="Older" />
+                </div>
+            )}
+            {newer && (
+                <div class:list={['col-md-6', { 'ms-auto': !older }]}>
+                    <EpisodeLink episode={newer} label="Newer" />
+                </div>
+            )}
+        </nav>
+    </article>
+</Layout>
