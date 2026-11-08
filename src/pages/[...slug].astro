@@ -10,13 +10,13 @@ export function getStaticPaths() {
     return pages.map(page => ({ params: { slug: page.slug }, props: page }));
 }
 
-const { title, description, logo, slug, category, itemsPerPage, isShort, heroPadding, seasonTabs } = Astro.props;
+const { title, description, metaDescription, logo, slug, category, itemsPerPage, isShort, heroPadding, seasonTabs } = Astro.props;
 
 const pageVideos = videos.filter(video => video.categories.includes(category));
 const seasons = seasonTabs ? [...new Set(pageVideos.map(video => video.season))].sort((a, b) => b - a) : [];
 const firstPage = pageVideos.filter(video => !seasonTabs || video.season === seasons[0]).slice(0, itemsPerPage);
 ---
-<Layout title={title} description={description} logo={logo} slug={slug} heroPadding={heroPadding}>
+<Layout title={title} description={metaDescription} logo={logo} slug={slug} heroPadding={heroPadding} heroText={description}>
     {!slug && <LatestEpisode />}
     <div class="album" data-items-per-page={itemsPerPage}>
         {seasonTabs && <SeasonTabs seasons={seasons} />}

@@ -12,18 +12,14 @@ if ('serviceWorker' in navigator) {
     });
 }
 
-function setTheme(theme) {
+function applyTheme(theme) {
     htmlElement.setAttribute('data-bs-theme', theme);
-    localStorage.setItem('theme', theme);
+}
 
-    const darkModeIcon = document.getElementById('darkModeIcon');
-    if (darkModeIcon) {
-        if (theme === 'dark') {
-            darkModeIcon.className = 'fas fa-sun text-warning';
-        } else {
-            darkModeIcon.className = 'fas fa-moon text-light';
-        }
-    }
+// Only a press of the toggle is saved, so the site keeps following the system theme until then
+function setTheme(theme) {
+    applyTheme(theme);
+    localStorage.setItem('theme', theme);
 }
 
 function getPreferredTheme() {
@@ -34,19 +30,18 @@ function getPreferredTheme() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
-setTheme(getPreferredTheme());
+applyTheme(getPreferredTheme());
 
 document.addEventListener("DOMContentLoaded", () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (!localStorage.getItem('theme')) {
-            setTheme(getPreferredTheme());
+            applyTheme(getPreferredTheme());
         }
     });
 
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (darkModeToggle) {
-        darkModeToggle.addEventListener('click', (e) => {
-            e.preventDefault();
+        darkModeToggle.addEventListener('click', () => {
             const currentTheme = htmlElement.getAttribute('data-bs-theme');
             setTheme(currentTheme === 'dark' ? 'light' : 'dark');
         });
@@ -67,9 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const iframe = document.createElement('iframe');
         iframe.src = `https://www.youtube.com/embed/${link.getAttribute('data-video-id')}?autoplay=1`;
         iframe.title = link.getAttribute('data-video-title');
+        iframe.className = link.classList.contains('short-video') ? 'short-video' : '';
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
         iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         iframe.allowFullscreen = true;
+        iframe.videoLink = link;
         link.replaceWith(iframe);
     }
 
@@ -90,85 +87,95 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const albumWrapper = document.querySelector('.album');
-    if (albumWrapper) {
-        initializePagination(albumWrapper);
-    }
-
-    function initializePagination(albumWrapper) {
-        const allItems = albumWrapper.querySelectorAll('.video-item');
-        const paginationContainers = albumWrapper.querySelectorAll('.pagination-container');
-        const seasonTabs = albumWrapper.querySelectorAll('.season-tabs-container .nav-link');
-        const itemsPerPage = parseInt(albumWrapper.getAttribute('data-items-per-page')) || 6;
+    const videoGrid = document.getElementById('videoGrid');
+    if (videoGrid) {
+        const albumWrapper = document.querySelector('.album');
+        const itemsPerPage = parseInt(albumWrapper.getAttribute('data-items-per-page'));
+        const allItems = Array.from(videoGrid.querySelectorAll('.video-item'));
+        const paginationContainers = document.querySelectorAll('.pagination-container');
+        const seasonTabs = document.querySelectorAll('.season-tabs-container .nav-link');
+        const seasons = [...new Set(Array.from(seasonTabs).map(tab => tab.getAttribute('data-target-season')))];
+        const defaultSeason = seasons[0];
 
         let currentPage = 1;
-        let filteredItems = [];
+        let currentSeason = defaultSeason;
+        let filteredItems = allItems;
 
-        function updateSeason(season) {
-            currentPage = 1;
+        function scrollToGrid() {
+            if (videoGrid.getBoundingClientRect().top < 0) {
+                videoGrid.scrollIntoView();
+            }
+        }
 
+        function stopVideo(item) {
+            const iframe = item.querySelector('iframe');
+            if (iframe) {
+                iframe.replaceWith(iframe.videoLink);
+            }
+        }
+
+        function getStateFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            const season = params.get('season');
+            return {
+                season: seasons.includes(season) ? season : defaultSeason,
+                page: parseInt(params.get('page')) || 1
+            };
+        }
+
+        function updateUrl() {
+            const params = new URLSearchParams();
+            if (currentSeason !== defaultSeason) {
+                params.set('season', currentSeason);
+            }
+            if (currentPage > 1) {
+                params.set('page', currentPage);
+            }
+            const query = params.toString();
+            window.history.pushState(null, '', query ? `?${query}` : window.location.pathname);
+        }
+
+        function render(season, page) {
+            currentSeason = season;
+            filteredItems = season ? allItems.filter(item => item.getAttribute('data-season') === season) : allItems;
+            const totalPages = Math.max(Math.ceil(filteredItems.length / itemsPerPage), 1);
+            currentPage = Math.min(Math.max(page, 1), totalPages);
+
+            const start = (currentPage - 1) * itemsPerPage;
+            const visibleItems = filteredItems.slice(start, start + itemsPerPage);
             allItems.forEach(item => {
-                item.classList.add('d-none');
-                const iframe = item.querySelector('iframe');
-                if (iframe && iframe.hasAttribute('src')) {
-                    iframe.removeAttribute('src');
+                const visible = visibleItems.includes(item);
+                item.classList.toggle('d-none', !visible);
+                if (!visible) {
+                    stopVideo(item);
                 }
             });
-
-            filteredItems = Array.from(allItems).filter(item => item.getAttribute('data-season') === season);
 
             seasonTabs.forEach(tab => {
-                if (tab.getAttribute('data-target-season') === season) {
-                    tab.classList.add('active');
-                } else {
-                    tab.classList.remove('active');
-                }
+                const active = tab.getAttribute('data-target-season') === currentSeason;
+                tab.classList.toggle('active', active);
+                tab.setAttribute('aria-pressed', active ? 'true' : 'false');
             });
 
-            renderPage(1);
+            renderPaginationControls(totalPages);
         }
 
-        function renderPage(page) {
-            currentPage = page;
-            const start = (page - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-
-            filteredItems.forEach((item, index) => {
-                const iframe = item.querySelector('iframe');
-
-                if (index >= start && index < end) {
-                    item.classList.remove('d-none');
-                    if (iframe && iframe.getAttribute('data-src') && !iframe.getAttribute('src')) {
-                        iframe.setAttribute('src', iframe.getAttribute('data-src'));
-                    }
-                } else {
-                    item.classList.add('d-none');
-                    if (iframe && iframe.hasAttribute('src')) {
-                        iframe.removeAttribute('src');
-                    }
-                }
-            });
-
-            renderPaginationControls();
+        function goTo(season, page) {
+            render(season, page);
+            updateUrl();
+            scrollToGrid();
         }
 
-        function createPageItem(label, className, onClick) {
-            const li = document.createElement('li');
-            li.className = `page-item ${className}`;
-            const a = document.createElement('a');
-            a.className = 'page-link';
-            a.href = '#';
-            a.textContent = label;
-            a.addEventListener('click', (e) => {
-                e.preventDefault();
-                onClick();
-            });
-            li.appendChild(a);
-            return li;
+        function createPageButton(label, onClick) {
+            const button = document.createElement('button');
+            button.className = 'page-link';
+            button.type = 'button';
+            button.textContent = label;
+            button.addEventListener('click', onClick);
+            return button;
         }
 
-        function renderPaginationControls() {
-            const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+        function renderPaginationControls(totalPages) {
             paginationContainers.forEach(container => {
                 container.innerHTML = '';
 
@@ -176,38 +183,39 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                container.appendChild(createPageItem('Previous', currentPage === 1 ? 'd-none' : '', () => {
-                    if (currentPage > 1) {
-                        renderPage(currentPage - 1);
-                    }
-                }));
+                const prevLi = document.createElement('li');
+                prevLi.className = `page-item ${currentPage === 1 ? 'd-none' : ''}`;
+                prevLi.appendChild(createPageButton('Previous', () => goTo(currentSeason, currentPage - 1)));
+                container.appendChild(prevLi);
 
                 for (let i = 1; i <= totalPages; i++) {
-                    container.appendChild(createPageItem(i, i === currentPage ? 'active' : '', () => renderPage(i)));
+                    const li = document.createElement('li');
+                    li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+                    const button = createPageButton(i, () => goTo(currentSeason, i));
+                    if (i === currentPage) {
+                        button.setAttribute('aria-current', 'page');
+                    }
+                    li.appendChild(button);
+                    container.appendChild(li);
                 }
 
-                container.appendChild(createPageItem('Next', currentPage === totalPages ? 'd-none' : '', () => {
-                    if (currentPage < totalPages) {
-                        renderPage(currentPage + 1);
-                    }
-                }));
+                const nextLi = document.createElement('li');
+                nextLi.className = `page-item ${currentPage === totalPages ? 'd-none' : ''}`;
+                nextLi.appendChild(createPageButton('Next', () => goTo(currentSeason, currentPage + 1)));
+                container.appendChild(nextLi);
             });
         }
 
         seasonTabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                updateSeason(tab.getAttribute('data-target-season'));
-            });
+            tab.addEventListener('click', () => goTo(tab.getAttribute('data-target-season'), 1));
         });
 
-        if (allItems.length > 0) {
-            if (seasonTabs.length > 0) {
-                updateSeason(seasonTabs[0].getAttribute('data-target-season'));
-            } else {
-                filteredItems = Array.from(allItems);
-                renderPage(1);
-            }
-        }
+        window.addEventListener('popstate', () => {
+            const { season, page } = getStateFromUrl();
+            render(season, page);
+        });
+
+        const { season, page } = getStateFromUrl();
+        render(season, page);
     }
 });

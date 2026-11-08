@@ -10,6 +10,7 @@ const {
     logo,
     slug,
     image = '/img/header.jpg',
+    noindex = false,
     heroPadding = 'py-4',
     heroTitle = title,
     heroTitleClass,
@@ -25,6 +26,7 @@ const imageUrl = new URL(image, Astro.site);
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Pratyush Nalam, Delwyn Serrao">
         <meta name="description" content={description}>
+        {noindex ? <meta name="robots" content="noindex"> : <link rel="canonical" href={pageUrl}>}
         <meta property="og:type" content="website">
         <meta property="og:url" content={pageUrl}>
         <meta property="og:title" content={title}>
@@ -36,16 +38,19 @@ const imageUrl = new URL(image, Astro.site);
         <meta property="twitter:description" content={description}>
         <meta property="twitter:image" content={imageUrl}>
         <link rel="alternate" type="application/rss+xml" title="Red Devil Rebuild Podcast Feed" href="/podcast.xml">
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml">
         <link rel="preconnect" href="https://www.youtube.com">
         <link rel="preconnect" href="https://i.ytimg.com">
-        <link rel="shortcut icon" type="image/png" href="/img/logo.png">
-        <link rel="apple-touch-icon" href="/img/logo.png">
+        <link rel="icon" type="image/png" href="/img/favicon-32.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
         <link rel="manifest" href="/manifest.json">
         <meta name="theme-color" content="#e10600">
+        <!-- Set the theme before first paint -->
+        <script is:inline>
+            document.documentElement.setAttribute('data-bs-theme', localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+        </script>
         <!-- Bootstrap v5.3.8 -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <!-- Font Awesome Kit -->
-        <script is:inline src="https://kit.fontawesome.com/9f21882fa1.js" crossorigin="anonymous" defer></script>
         <!-- Bootstrap v5.3.8 -->
         <script is:inline src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
         <!-- Fathom Analytics -->
@@ -54,14 +59,15 @@ const imageUrl = new URL(image, Astro.site);
         <title>{title}</title>
     </head>
     <body>
-        <main>
-            <header class:list={[heroPadding, 'mb-4 hero-jumbotron text-center']}>
-                <Navbar slug={slug} />
-                <Hero title={heroTitle} titleClass={heroTitleClass} description={heroText} logo={logo} />
-            </header>
+        <a class="visually-hidden-focusable" href="#main">Skip to content</a>
+        <header class:list={[heroPadding, 'mb-4 hero-jumbotron text-center']}>
+            <Navbar slug={slug} />
+            <Hero title={heroTitle} titleClass={heroTitleClass} description={heroText} logo={logo} />
+        </header>
+        <main id="main">
             <slot />
-            <Footer />
         </main>
+        <Footer />
         <script src="../scripts/custom.js"></script>
     </body>
 </html>

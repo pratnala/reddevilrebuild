@@ -1,18 +1,8 @@
-/*
-
-Font extensions:
-
-* woff2 - Super Modern Browsers
-* woff  - Pretty Modern Browsers
-
-*/
-
 @font-face {
     font-family: 'Dubai';
 
     font-display: swap;
-    src: url('/fonts/DubaiW23-Regular.woff2') format('woff2'),
-    url('/fonts/DubaiW23-Regular.woff') format('woff');
+    src: url('/fonts/DubaiW23-Regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -20,8 +10,7 @@ Font extensions:
     font-weight: 300;
 
     font-display: swap;
-    src: url('/fonts/DubaiW23-Light.woff2') format('woff2'),
-    url('/fonts/DubaiW23-Light.woff') format('woff');
+    src: url('/fonts/DubaiW23-Light.woff2') format('woff2');
 }
 
 @font-face {
@@ -29,8 +18,7 @@ Font extensions:
     font-weight: 500;
 
     font-display: swap;
-    src: url('/fonts/DubaiW23-Medium.woff2') format('woff2'),
-    url('/fonts/DubaiW23-Medium.woff') format('woff');
+    src: url('/fonts/DubaiW23-Medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,8 +26,7 @@ Font extensions:
     font-weight: bold;
 
     font-display: swap;
-    src: url('/fonts/DubaiW23-Bold.woff2') format('woff2'),
-    url('/fonts/DubaiW23-Bold.woff') format('woff');
+    src: url('/fonts/DubaiW23-Bold.woff2') format('woff2');
 }
 
 body {
@@ -169,6 +156,20 @@ iframe.short-video {
     overflow-wrap: anywhere;
 }
 
+.icon {
+    width: 1.25em;
+    height: 1em;
+
+    vertical-align: -.125em;
+
+    fill: currentColor;
+}
+
+[data-bs-theme='dark'] .theme-icon-light,
+[data-bs-theme='light'] .theme-icon-dark {
+    display: none;
+}
+
 .btn-apple {
     color: #ffffff;
     background-color: #872ec4;
@@ -226,7 +227,7 @@ iframe.short-video {
 
 .hero-jumbotron {
     color: #ffffff;
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url('/img/header.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url('/img/header-hero.webp');
     background-repeat: no-repeat;
     background-position: 50% 25%;
     background-size: cover;
@@ -279,6 +280,10 @@ iframe.short-video {
     -webkit-backdrop-filter: blur(12px);
 }
 
+#videoGrid {
+    scroll-margin-top: 6rem;
+}
+
 @media (max-width: 991.98px) {
     .navbar-collapse {
         margin-top: .75rem;
@@ -287,5 +292,9 @@ iframe.short-video {
         border-radius: .5rem;
         background-color: #212529;
         box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+    }
+
+    .navbar-collapse .dropdown-toggle {
+        width: 100%;
     }
 }
